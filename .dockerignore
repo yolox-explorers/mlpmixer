@@ -1,3 +1,12 @@
 data/**
 data/**/**
 __pycache__
+
+# Eval
+vision_transformers/eval/**
+!vision_transformers/eval/__init__.py
+
+#model_weights
+vision_transformers/model_weights/**
+!vision_transformers/model_weights/checkpoint_weights/__init__.py
+!vision_transformers/model_weights/__init__.py
