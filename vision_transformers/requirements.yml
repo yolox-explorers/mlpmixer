@@ -1,0 +1,40 @@
+name: mlpmixer
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.7
+  - pip=20.3
+  - pip:
+    - absl-py>=0.12.0
+    - einops>=0.3.0
+    - chex>=0.0.7
+    - clu>=0.0.3
+    - flax==0.4.1
+    - ml-collections
+    - numpy>=1.19.5
+    - pandas>=1.1.0
+    - matplotlib==3.5.1
+    - gsutil
+    - tqdm
+    - cython
+    - regex==2022.1.18
+    - patool==1.12
+    - pynvml==11.4.1
+    - ImageHash==4.2.1
+    - hydra-core==1.1.1
+    - mlflow==1.22.0
+    - opencv-python==4.5.5.62
+    - tensorflow-cpu>=2.4.0  # Using tensorflow-cpu to have all GPU memory for JAX.
+    - tensorflow-datasets>=4.0.1
+    - tensorflow-probability>=0.11.1
+    - tensorflow-text==2.9.0
+    - transformers==4.20.0
+    - scikit-image==0.19.1
+    - albumentations==1.1.0
+    - pycocotools==2.0.4
+    - pytest-cov==2.10.1
+    - pytest-datafiles==2.0.1
+    - pyyaml==5.4.1
+    - https://download.pytorch.org/whl/cu110/torch-1.7.1%2Bcu110-cp37-cp37m-linux_x86_64.whl
+    - https://download.pytorch.org/whl/cu110/torchvision-0.8.2%2Bcu110-cp37-cp37m-linux_x86_64.whl
