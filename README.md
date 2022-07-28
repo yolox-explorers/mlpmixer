@@ -183,12 +183,12 @@ python -m vision_transformers.evaluate --station=slope --time=day --image_catalo
 
 val set -   weighted f1 score [0.8014], accuracy [0.8072]
 
-<img src="https://github.com/yolox-explorers/mlpmixer/blob/main/assets/slope_val_confusion_matrix.jpg" alt="slope validation cm" width="400" height="300"/>
+<img src="https://github.com/yolox-explorers/mlpmixer/blob/main/assets/slope_val_confusion_matrix.jpg" alt="slope validation cm" width="640" height="480"/>
 
 
 test set -   weighted f1 score [0.6936], accuracy [0.7074]
 
-<img src="https://github.com/yolox-explorers/mlpmixer/blob/main/assets/slope_val_confusion_matrix.jpg" alt="slope test cm" width="400" height="300"/>
+<img src="https://github.com/yolox-explorers/mlpmixer/blob/main/assets/slope_val_confusion_matrix.jpg" alt="slope test cm" width="640" height="480"/>
 
 
 ### park day station - 80% training data, 10% validation data
