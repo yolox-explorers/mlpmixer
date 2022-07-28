@@ -1,0 +1,57 @@
+data_prep:
+  img_zip_dir: "../../../data/cleaned"   
+  img_save_dir: "../../../data/extracted"
+  root_dir: null
+  mount_path: null
+  testing: False
+  raw_dirs_paths:
+    - "../../sample_data/raw"
+  processed_data_path: "../../sample_data/raw/imdb.csv"
+  gen_images: false
+  occlude: true
+  image_catalog_path: null
+  stations: []
+  times: []
+  data_sets: []
+  wrong_label:
+    true_occlusion: {
+      "park_on_night_clear_part3_not_occluded": [
+        'saved_img7965.jpg','saved_img7964.jpg', 'saved_img7966.jpg'
+      ]
+    }
+    obs_occ: {
+      "park_off_night_heavy_rain_part2": [
+        'saved_img5226.jpg', 'saved_img5228.jpg', 'saved_img5072.jpg',
+        'saved_img5073.jpg'
+      ],
+      "park_off_night_clear_part3_occluded": [
+        'saved_img9910.jpg', 'saved_img7210.jpg', 'saved_img10131.jpg'
+      ]
+    }
+    obs_not_occ: {
+      "park_on_night_clear_part3_not_occluded": [
+        'saved_img7965.jpg', 'saved_img7839.jpg', 'saved_img7838.jpg',
+        'saved_img7964.jpg', 'saved_img7966.jpg', 'saved_img7967.jpg',
+        'saved_img7837.jpg', 'saved_img7401.jpg', 'saved_img7398.jpg',
+        'saved_img7399.jpg', 'saved_img7400.jpg', 'saved_img7402.jpg',
+        'saved_img7403.jpg', 'saved_img7262.jpg', 'saved_img7841.jpg',
+        'saved_img7840.jpg', 'saved_img7261.jpg', 'saved_img7260.jpg',
+        'saved_img7258.jpg', 'saved_img7259.jpg'
+      ]
+    }
+    motor_occ: {
+      "park_on_night_wet_part2_not_occluded": [saved_img1228.jpg]
+    }
+    motor_not_occ: {
+      "park_off_night_heavy_rain_part2": [
+        'saved_img5014.jpg', 'saved_img5016.jpg', 'saved_img5066.jpg'
+      ],
+      "park_off_night_rain_part2_occluded": [
+        'saved_img1309.jpg', 'saved_img2370.jpg', 'saved_img2371.jpg',
+        'saved_img27.jpg', 'saved_img9548.jpg', 'saved_img5934.jpg'
+      ]
+    }
+
+train:
+  val_split: 0.1
+  test_split: 0.1
