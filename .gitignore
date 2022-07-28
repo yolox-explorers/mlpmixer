@@ -2,11 +2,9 @@ data/**
 data/**/**
 __pycache__
 
-# Data prep scripts
-src
 
 # Eval
-vision_transformers/eval
+vision_transformers/eval/**
 !vision_transformers/eval/__init__.py
 
 #model_weights
