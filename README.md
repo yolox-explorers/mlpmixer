@@ -69,8 +69,8 @@ project_repo
         |── dataloaders.py  <- Dataloaders for mixer model (non-jax) training
         |── model.py        <- mixer model (non-jax) scripts
         |── train.py        <- mixer model (non-jax) training scripts
-        |── inference.py    <- python script for inference
-        |── eval.py         <- python script for evaluation of results
+        |── inference.py    <- python script for inference for non-jax mixer model
+        |── evaluate.py     <- python script for evaluation of results or non-jax mixer model
         |── mlpmixer_helper.py
         |                   ^- helper functions for mlpmixer (jax)
         |── mlpmixer_train.py
