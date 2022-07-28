@@ -200,11 +200,10 @@ python -m vision_transformers.evaluate --station=park --time=day --image_catalog
 **Evaluation Results (Park day):**
 
 val set -   weighted f1 score [0.9668], accuracy [0.9667]
-![park day validation cm](/assets/park_day_val_confusion_matrix.jpg)
+<img src="https://github.com/yolox-explorers/mlpmixer/blob/main/assets/park_day_val_confusion_matrix.jpg" alt="park day validation cm" width="640" height="480"/>
 
 test set -   weighted f1 score [0.9783], accuracy [0.9783]
-![park day test cm](/assets/park_day_test_confusion_matrix.jpg)
-
+<img src="https://github.com/yolox-explorers/mlpmixer/blob/main/assets/park_day_test_confusion_matrix.jpg" alt="park day test cm" width="640" height="480"/>
       
 
 ### park night station - 80% training data, 10% validation data
@@ -216,7 +215,7 @@ python -m vision_transformers.evaluate --station=park --time=night --image_catal
 **Evaluation Results (Park Night):**
 
 val set -   weighted f1 score [0.9750], accuracy [0.9750]
-![park night validation cm](/assets/park_night_val_confusion_matrix.jpg)
+<img src="https://github.com/yolox-explorers/mlpmixer/blob/main/assets/park_night_val_confusion_matrix.jpg" alt="park night validation cm" width="640" height="480"/>
 
 test set -   weighted f1 score [0.9604], accuracy [0.9604]
-![park night test cm](/assets/park_night_test_confusion_matrix.jpg)
+<img src="https://github.com/yolox-explorers/mlpmixer/blob/main/assets/park_night_test_confusion_matrix.jpg" alt="park night test cm" width="640" height="480"/>
