@@ -219,3 +219,10 @@ val set -   weighted f1 score [0.9750], accuracy [0.9750]
 
 test set -   weighted f1 score [0.9604], accuracy [0.9604]
 <img src="https://github.com/yolox-explorers/mlpmixer/blob/main/assets/park_night_test_confusion_matrix.jpg" alt="park night test cm" width="640" height="480"/>
+
+
+# Credits
+Credits to the following team mates for contributing to repo!
+- Mr Tan Choon Meng
+- Ms Joy Lin
+- Mr Ooi Zi Wei Matt
