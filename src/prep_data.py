@@ -19,10 +19,6 @@ import shutil
 from src.modelling.data_prep.clean_data import Clean
 
 class PrepData:
-    """
-    Class to prepare a standardised dataset assuming data from GCP buckets have been downloaded to the 'whyre-tech-dev\data\whyretech-aut0' directory.
-    """
-
     def __init__(self, args):
             self.img_zip_dir = os.path.abspath(args["data_prep"]["img_zip_dir"])
             self.img_save_dir = os.path.abspath(args["data_prep"]["img_save_dir"])
@@ -64,7 +60,7 @@ class PrepData:
         - Can be used to update destination directory if there are updated image zip files.
 
         Args:
-            src_dir (str, optional): Source directory containing the original data including .zip files. Defaults to '.\data\whyretech-aut0'.
+            src_dir (str, optional): Source directory containing the original data including .zip files i.e. '.\data\cleaned'.
             dest_dir (str, optional): Destination directory to copy all files. Defaults to '.\data\extracted'.
         """
 

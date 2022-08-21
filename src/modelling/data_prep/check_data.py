@@ -122,7 +122,7 @@ class Check:
         - for day images:
             - all car and obstacle occlusion should be False
         - for night (park) images:
-            - checks if filename occlusion label matches MOTORCYCLE occlusion
+            - checks if filename occlusion label matches CAR occlusion
                 label, else counts towards `wrong_occ`
             - counts of car occluded / not occluded
             - counts of obstacle occluded / not occluded
@@ -133,7 +133,7 @@ class Check:
         """
         car_is_occ, car_not_occ, wrong_occ, \
             obstacle_is_occ, obstacle_not_occ, \
-                day_obs_notocc, day_mot_notocc = 0, 0, 0, 0, 0, 0, 0
+                day_obs_notocc, day_car_notocc = 0, 0, 0, 0, 0, 0, 0
         night_df = df[df['time_of_day'] == 'night']
         desc_bool = None    # description from folder name
         for i in tqdm(range(len(df))):
@@ -161,7 +161,7 @@ class Check:
             elif desc_bool is None and \
                 df["car_is_occluded"].iloc[i] == False and \
                     df["time_of_day"].iloc[i] != "night":
-                day_mot_notocc += 1
+                day_car_notocc += 1
             elif desc_bool != df["car_is_occluded"].iloc[i]:
                 wrong_occ += 1
 
@@ -179,7 +179,7 @@ class Check:
                 \nNo. of obstacle is not occluded: {obstacle_not_occ} \
                 \nNo. of wrong occlusion labels: {wrong_occ} \
                 \n\nTotal no. of day images: {len(df) - len(night_df)} \
-                \nNo. of car is not occluded: {day_mot_notocc} \
+                \nNo. of car is not occluded: {day_car_notocc} \
                 \nNo. of obstacle is not occluded: {day_obs_notocc}")
 
     def annotation_counts(self, df: pd.DataFrame, station: str):

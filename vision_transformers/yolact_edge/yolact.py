@@ -1089,9 +1089,9 @@ class Yolact(nn.Module):
     def __init__(self, training=True):
         super().__init__()
 
-        # WT changes 1 - start
+        # custom changes 1 - start
         print("cfg.num_classes", cfg.num_classes)
-        # WT changes 1 - send
+        # custom changes 1 - send
 
         self.backbone = construct_backbone(cfg.backbone)
 

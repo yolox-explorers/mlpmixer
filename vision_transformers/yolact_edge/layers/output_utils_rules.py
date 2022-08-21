@@ -204,14 +204,14 @@ def postprocess(
         # print("xxxx", len(xxx), xxx)
         # print("masks pp", masks, masks.shape, len(masks[masks == 1] ), xxx, len(xxx[0]), len(xxx[1]), len(xxx[2])) 
 
-        # WT changes 1 - start
+        # custom changes 1 - start
         if save_path is not None:
             output = run_rules(masks, classes)
             save_path = create_new_save_path(
                 output = output,
                 save_path = save_path
             )
-        # WT changes 1 - end
+        # custom changes 1 - end
     
     boxes[:, 0], boxes[:, 2] = sanitize_coordinates(boxes[:, 0], boxes[:, 2], b_w, cast=False)
     boxes[:, 1], boxes[:, 3] = sanitize_coordinates(boxes[:, 1], boxes[:, 3], b_h, cast=False)
@@ -238,12 +238,12 @@ def postprocess(
         
         masks = full_masks
 
-    # WT changes 2 - start
+    # custom changes 2 - start
     if save_path is not None:
         return classes, scores, boxes, masks, output, save_path
     else:
         return classes, scores, boxes, masks
-    # WT changes 2 - end
+    # custom changes 2 - end
 
     
 

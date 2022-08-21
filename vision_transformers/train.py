@@ -103,7 +103,7 @@ parser.add_argument('--loss_scale', type=float, default=0,
 
 # YE generated mask options
 parser.add_argument('--ye_weights_path', type = str, help = 'filepath for ye_weights')
-parser.add_argument('--ye_model_config', default="yolact_edge_mobilenetv2_wt_config", type = str)
+parser.add_argument('--ye_model_config', default="yolact_edge_mobilenetv2_custom_config", type = str)
 parser.add_argument('--crop_size', default = 224, type = int, \
     help = "size of cropped masks from YE model to feed to MLP/ViT model for training & inference")
 parser.add_argument('--save_cropped_images', default = False, \
@@ -402,11 +402,11 @@ if __name__ == "__main__":
     # Checks if YE weights exists
     if args.ye_weights_path is None:
         if args.station == 'slope':
-            args.ye_weights_path = "/home/user/MLPmixer/vision_transformers/model_weights/slope_yolact_edge_mobilenetv2_wt_100_46258_zoom_5.pth"
+            args.ye_weights_path = "/home/user/MLPmixer/vision_transformers/model_weights/slope_yolact_edge_mobilenetv_100_46258_zoom_5.pth"
         elif (args.station == 'park') & (args.time == 'day'):
-            args.ye_weights_path = "/home/user/MLPmixer/vision_transformers/model_weights/park_day_yolact_edge_mobilenetv2_wt_100_41208_zoom_5.pth"
+            args.ye_weights_path = "/home/user/MLPmixer/vision_transformers/model_weights/park_day_yolact_edge_mobilenetv2_100_41208_zoom_5.pth"
         elif (args.station == 'park') & (args.time == 'night'):
-            args.ye_weights_path = "/home/user/MLPmixer/vision_transformers/model_weights/park_night_yolact_edge_mobilenetv2_wt_100_41309_zoom_5.pth"
+            args.ye_weights_path = "/home/user/MLPmixer/vision_transformers/model_weights/park_night_yolact_edge_mobilenetv2_100_41309_zoom_5.pth"
     assert os.path.exists(args.ye_weights_path), f"{args.ye_weights_path} does not exist"
 
     if './vision_transformers' not in sys.path:

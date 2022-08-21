@@ -160,7 +160,7 @@ python -m vision_transformers.train --station=park --time=night --pretrained_dir
 # Inference
 
 ```
-python -m vision_transformers.inference --station=slope --time=day --image_resize_factor=0.1809 --show_window=True --image_source_folder="/home/user/MLPmixer/data/extracted/20220309_1542721/slope_off_sunny_part2_1/images" --source=1 --image_output_folder="/home/user/MLPmixer/vision_transformers/ye_images/" --ye_weights_path="/home/user/MLPmixer/vision_transformers/model_weights/slope_yolact_edge_mobilenetv2_wt_100_46258_zoom_5.pth" --ye_model_config="yolact_edge_mobilenetv2_custom_config" --mixer_fpath="/home/user/MLPmixer/vision_transformers/model_weights/slope_mlpmixer_epoch_1_50.pth" --disable_tensorrt=True
+python -m vision_transformers.inference --station=slope --time=day --image_resize_factor=0.1809 --show_window=True --image_source_folder="/home/user/MLPmixer/data/extracted/20220309_1542721/slope_off_sunny_part2_1/images" --source=1 --image_output_folder="/home/user/MLPmixer/vision_transformers/ye_images/" --ye_weights_path="/home/user/MLPmixer/vision_transformers/model_weights/slope_yolact_edge_mobilenetv2_100_46258_zoom_5.pth" --ye_model_config="yolact_edge_mobilenetv2_custom_config" --mixer_fpath="/home/user/MLPmixer/vision_transformers/model_weights/slope_mlpmixer_epoch_1_50.pth" --disable_tensorrt=True
 ```
 
 
@@ -176,7 +176,7 @@ park night:    39 epochs, 7925 training batches
 ### slope station - 80% training data, 10% validation data
 Eval Command:
 ```
-python -m vision_transformers.evaluate --station=slope --time=day --image_catalog_path=/home/user/MLPmixer/data/extracted/clean_img_data.pkl --image_resize_factor=0.1809 --image_output_folder="/home/user/MLPmixer/vision_transformers/eval" --ye_weights_path="/home/user/MLPmixer/vision_transformers/model_weights/slope_yolact_edge_mobilenetv2_wt_100_46258_zoom_5.pth" --ye_model_config="yolact_edge_mobilenetv2_wt_config" --mixer_fpath=/home/user/MLPmixer/vision_transformers/model_weights/checkpoint_weights/<path_to_weights> --val_dataset=val
+python -m vision_transformers.evaluate --station=slope --time=day --image_catalog_path=/home/user/MLPmixer/data/extracted/clean_img_data.pkl --image_resize_factor=0.1809 --image_output_folder="/home/user/MLPmixer/vision_transformers/eval" --ye_weights_path="/home/user/MLPmixer/vision_transformers/model_weights/slope_yolact_edge_mobilenetv2_100_46258_zoom_5.pth" --ye_model_config="yolact_edge_mobilenetv2_custom_config" --mixer_fpath=/home/user/MLPmixer/vision_transformers/model_weights/checkpoint_weights/<path_to_weights> --val_dataset=val
 ```
 
 **Evaluation Results (slope day)**
@@ -194,7 +194,7 @@ test set -   weighted f1 score [0.6936], accuracy [0.7074]
 ### park day station - 80% training data, 10% validation data
 Eval Command:
 ```
-python -m vision_transformers.evaluate --station=park --time=day --image_catalog_path=/home/user/MLPmixer/data/extracted/clean_img_data.pkl --image_resize_factor=0.1809 --image_output_folder="/home/user/MLPmixer/vision_transformers/eval" --ye_weights_path="/home/user/MLPmixer/vision_transformers/model_weights/park_day_yolact_edge_mobilenetv2_wt_100_41208_zoom_5.pth" --ye_model_config="yolact_edge_mobilenetv2_wt_config" --mixer_fpath=/home/user/MLPmixer/vision_transformers/model_weights/checkpoint_weights/<path_to_weights> --val_dataset=val
+python -m vision_transformers.evaluate --station=park --time=day --image_catalog_path=/home/user/MLPmixer/data/extracted/clean_img_data.pkl --image_resize_factor=0.1809 --image_output_folder="/home/user/MLPmixer/vision_transformers/eval" --ye_weights_path="/home/user/MLPmixer/vision_transformers/model_weights/park_day_yolact_edge_mobilenetv2_100_41208_zoom_5.pth" --ye_model_config="yolact_edge_mobilenetv2_custom_config" --mixer_fpath=/home/user/MLPmixer/vision_transformers/model_weights/checkpoint_weights/<path_to_weights> --val_dataset=val
 ```
 
 **Evaluation Results (Park day):**
@@ -209,7 +209,7 @@ test set -   weighted f1 score [0.9783], accuracy [0.9783]
 ### park night station - 80% training data, 10% validation data
 Eval Command:
 ```
-python -m vision_transformers.evaluate --station=park --time=night --image_catalog_path=/home/user/MLPmixer/data/extracted/clean_img_data.pkl --image_resize_factor=0.1809 --image_output_folder="/home/user/MLPmixer/vision_transformers/eval" --ye_weights_path="/home/user/MLPmixer/vision_transformers/model_weights/park_night_yolact_edge_mobilenetv2_wt_100_41309_zoom_5.pth" --ye_model_config="yolact_edge_mobilenetv2_wt_config" --mixer_fpath=/home/user/MLPmixer/vision_transformers/model_weights/checkpoint_weights/<path_to_weights> --val_dataset=val
+python -m vision_transformers.evaluate --station=park --time=night --image_catalog_path=/home/user/MLPmixer/data/extracted/clean_img_data.pkl --image_resize_factor=0.1809 --image_output_folder="/home/user/MLPmixer/vision_transformers/eval" --ye_weights_path="/home/user/MLPmixer/vision_transformers/model_weights/park_night_yolact_edge_mobilenetv_100_41309_zoom_5.pth" --ye_model_config="yolact_edge_mobilenetv2_custom_config" --mixer_fpath=/home/user/MLPmixer/vision_transformers/model_weights/checkpoint_weights/<path_to_weights> --val_dataset=val
 ```
 
 **Evaluation Results (Park Night):**
